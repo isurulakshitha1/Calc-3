@@ -147,7 +147,8 @@ nav a:hover {
   color: #333;
 }
 
-.form-group input {
+.form-group input,
+.form-group select {
   width: 100%;
   padding: 12px 16px;
   border: 2px solid #e2e8f0;
@@ -156,7 +157,8 @@ nav a:hover {
   transition: border-color 0.3s ease;
 }
 
-.form-group input:focus {
+.form-group input:focus,
+.form-group select:focus {
   outline: none;
   border-color: #4f46e5;
 }
@@ -230,6 +232,26 @@ nav a:hover {
 .content-section h2 {
   color: #4f46e5;
   margin-bottom: 1rem;
+}
+
+.faq-item {
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 1rem;
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-question {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.faq-answer {
+  color: #666;
 }
 
 footer {
@@ -311,3 +333,36 @@ footer {
     padding: 1rem;
   }
 }
+
+/* ── Amortization Schedule Styles ── */
+.amortization-container h2 {
+  color: #4f46e5;
+  margin-bottom: 1rem;
+}
+
+.amortization-table th {
+  background: #f0f0f0;
+  font-weight: 600;
+}
+
+.amortization-table td,
+.amortization-table th {
+  padding: 8px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* ── Chart Container Styles ── */
+#chart-container {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  margin-bottom: 2rem;
+}
+
+#balanceChart {
+  max-width: 100%;
+  max-height: 400px;
+  }
