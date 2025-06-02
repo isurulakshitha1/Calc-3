@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Used Car Loan Calculator - AutoLoanMath.com</title>
+  <meta name="description" content="Calculate your used car loan payments with down payment and interest rate.">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="nav-container">
+        <a href="index.html" class="logo">AutoLoanMath</a>
+        <div class="hamburger" onclick="toggleMenu()">
+          <span></span><span></span><span></span>
+        </div>
+        <nav id="nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="car-loan-calculator.html">Car Loan Calculator</a></li>
+            <li><a href="car-loan-emi-calculator.html">EMI Calculator</a></li>
+            <li><a href="used-car-loan-calculator.html">Used Car Calculator</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="hero">
+        <h1>Used Car Loan Calculator</h1>
+        <p>Estimate payments for pre-owned vehicle financing.</p>
+      </div>
+
+      <div class="ad-placeholder">Advertisement Space</div>
+
+      <div class="form-container">
+        <form onsubmit="event.preventDefault(); calculateUsedCarLoan();">
+          <div class="form-group">
+            <label for="carValue">Used Car Value ($)</label>
+            <input type="number" id="carValue" placeholder="18000" step="100" required>
+          </div>
+
+          <div class="form-group">
+            <label for="usedDownPayment">Down Payment ($)</label>
+            <input type="number" id="usedDownPayment" placeholder="3000" step="100">
+          </div>
+
+          <div class="form-group">
+            <label for="usedInterestRate">Annual Interest Rate (%)</label>
+            <input type="number" id="usedInterestRate" placeholder="7.5" step="0.1" required>
+          </div>
+
+          <div class="form-group">
+            <label for="usedLoanTerm">Loan Term (Years)</label>
+            <input type="number" id="usedLoanTerm" placeholder="4" step="1" required>
+          </div>
+
+          <button type="submit" class="calculate-btn">Calculate Used Car Loan</button>
+        </form>
+
+        <div id="results" class="results"></div>
+      </div>
+
+      <div class="ad-placeholder">Advertisement Space</div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 AutoLoanMath.com - All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/calculator.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Car Loan EMI Calculator - AutoLoanMath.com</title>
+  <meta name="description" content="Calculate your monthly EMI payments for car loans with this free calculator.">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="nav-container">
+        <a href="index.html" class="logo">AutoLoanMath</a>
+        <div class="hamburger" onclick="toggleMenu()">
+          <span></span><span></span><span></span>
+        </div>
+        <nav id="nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="car-loan-calculator.html">Car Loan Calculator</a></li>
+            <li><a href="car-loan-emi-calculator.html">EMI Calculator</a></li>
+            <li><a href="used-car-loan-calculator.html">Used Car Calculator</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="hero">
+        <h1>Car Loan EMI Calculator</h1>
+        <p>Find your monthly EMI payments for any car loan amount.</p>
+      </div>
+
+      <div class="ad-placeholder">Advertisement Space</div>
+
+      <div class="form-container">
+        <form onsubmit="event.preventDefault(); calculateEMI();">
+          <div class="form-group">
+            <label for="emiLoanAmount">Loan Amount ($)</label>
+            <input type="number" id="emiLoanAmount" placeholder="30000" step="100" required>
+          </div>
+
+          <div class="form-group">
+            <label for="emiInterestRate">Annual Interest Rate (%)</label>
+            <input type="number" id="emiInterestRate" placeholder="6.5" step="0.1" required>
+          </div>
+
+          <div class="form-group">
+            <label for="emiLoanTerm">Loan Term (Years)</label>
+            <input type="number" id="emiLoanTerm" placeholder="4" step="1" required>
+          </div>
+
+          <button type="submit" class="calculate-btn">Calculate EMI</button>
+        </form>
+
+        <div id="results" class="results"></div>
+      </div>
+
+      <div class="ad-placeholder">Advertisement Space</div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 AutoLoanMath.com - All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/calculator.js"></script>
+</body>
+</html>
