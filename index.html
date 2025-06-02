@@ -3,9 +3,64 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AutoLoanMath.com - Free Car Loan Calculators & EMI Tools</title>
-  <meta name="description" content="Calculate your car loan EMI, monthly payments, and total interest with our free auto loan calculators. Get instant results for new and used car financing.">
+
+  <!-- SEO Meta -->
+  <title>AutoLoanMath.com – Car Loan Calculator & EMI Tools</title>
+  <meta name="description" content="Calculate car loan EMI, total interest, and monthly payments online. Free, fast, and works in any currency.">
+
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-47M6WYEQKT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-47M6WYEQKT');
+  </script>
+
+  <!-- FAQ Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is EMI in car loans?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "EMI stands for Equated Monthly Installment. It's the fixed amount you pay monthly to repay your car loan, which includes both principal and interest components."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is car loan EMI calculated?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "EMI is calculated using the formula: EMI = [P x R x (1+R)^N] / [(1+R)^N - 1], where P is principal, R is monthly interest rate, and N is the number of monthly installments."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I prepay my car loan to reduce EMI burden?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, most lenders allow prepayment. You can either reduce your EMI amount while keeping the same tenure, or reduce the tenure while maintaining the same EMI amount."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What factors affect my car loan EMI?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Your EMI is affected by the loan amount, interest rate, loan tenure, and your down payment. A larger down payment reduces your loan amount and subsequently your EMI."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <header>
@@ -13,7 +68,9 @@
       <div class="nav-container">
         <a href="index.html" class="logo">AutoLoanMath</a>
         <div class="hamburger" onclick="toggleMenu()">
-          <span></span><span></span><span></span>
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
         <nav id="nav">
           <ul>
@@ -66,14 +123,36 @@
 
       <div class="content-section">
         <h2>Why Use AutoLoanMath.com?</h2>
-        <p>We provide accurate and instant car loan calculations to help you plan better. Whether buying a new or used car, our tools help you understand your finances.</p>
+        <p>AutoLoanMath.com provides accurate and instant car loan calculations to help you make informed decisions about your auto financing. Our calculators are designed by financial experts and updated regularly to reflect current market conditions. Whether you're buying a new car, used vehicle, or refinancing an existing loan, our tools give you the clarity you need to negotiate better deals and understand your financial commitment.</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="content-section">
+        <h2>Car Loan EMI Calculator FAQ</h2>
+        <div class="faq-item">
+          <div class="faq-question">What is EMI in car loans?</div>
+          <div class="faq-answer">EMI stands for Equated Monthly Installment. It's the fixed amount you pay monthly to repay your car loan, which includes both principal and interest components.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">How is car loan EMI calculated?</div>
+          <div class="faq-answer">EMI is calculated using the formula: EMI = [P x R x (1+R)^N] / [(1+R)^N - 1], where P is principal, R is monthly interest rate, and N is the number of monthly installments.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Can I prepay my car loan to reduce EMI burden?</div>
+          <div class="faq-answer">Yes, most lenders allow prepayment. You can either reduce your EMI amount while keeping the same tenure, or reduce the tenure while maintaining the same EMI amount.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">What factors affect my car loan EMI?</div>
+          <div class="faq-answer">Your EMI is affected by the loan amount, interest rate, loan tenure, and your down payment. A larger down payment reduces your loan amount and subsequently your EMI.</div>
+        </div>
       </div>
     </div>
   </main>
 
   <footer>
     <div class="container">
-      <p>&copy; 2025 AutoLoanMath.com - Free Car Loan Calculators.</p>
+      <p>&copy; 2025 AutoLoanMath.com - Free Car Loan Calculators. All rights reserved.</p>
     </div>
   </footer>
 
