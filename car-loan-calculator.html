@@ -8,6 +8,9 @@
   <title>Car Loan Calculator – AutoLoanMath</title>
   <meta name="description" content="Estimate your car loan payments with interest, down payment, and loan term. View EMI and full payment schedule.">
 
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.png" type="image/png" />
+
   <!-- Stylesheet -->
   <link rel="stylesheet" href="css/styles.css" />
 
@@ -91,7 +94,7 @@
 
         <div id="results" class="results"></div>
 
-        <!-- Amortization Table Container (hidden until calculation) -->
+        <!-- Amortization Table Container -->
         <div id="amortization-container" class="amortization-container" style="display: none; margin-top: 2rem;">
           <h2>Amortization Schedule</h2>
           <table id="amortization-table" class="amortization-table" style="width: 100%; border-collapse: collapse;">
@@ -110,7 +113,7 @@
           </table>
         </div>
 
-        <!-- Chart Container (hidden until calculation) -->
+        <!-- Chart Container -->
         <div id="chart-container" style="display: none; margin-top: 2rem;">
           <h2>Balance Over Time</h2>
           <canvas id="balanceChart" width="100%" height="40"></canvas>
