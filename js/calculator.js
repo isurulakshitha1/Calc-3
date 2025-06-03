@@ -1,14 +1,14 @@
 // Your ExchangeRate-API key
 const EXCHANGE_API_KEY = "f3c0a1d2e3b4c5d6f7g8h9i0";
 
-// List of supported currencies
+// Supported currencies
 const SUPPORTED_CURRENCIES = ["USD", "EUR", "GBP", "INR", "AUD", "CAD", "JPY", "SGD"];
 
 // This object will hold exchange rates (USD → XXX)
 let exchangeRates = {};
 
 // ──────────────────────────────────────────────────────────────────────────────
-// Fetch live exchange rates (base = USD)
+// 1. Fetch live exchange rates (base = USD)
 async function fetchExchangeRates() {
   try {
     const response = await fetch(
@@ -29,7 +29,7 @@ async function fetchExchangeRates() {
 }
 
 // ──────────────────────────────────────────────────────────────────────────────
-// Utility: Format a number as a currency string
+// 2. Format number as currency string
 function formatInCurrency(amount, currencyCode) {
   return amount.toLocaleString("en-US", {
     style: "currency",
@@ -38,7 +38,7 @@ function formatInCurrency(amount, currencyCode) {
 }
 
 // ──────────────────────────────────────────────────────────────────────────────
-// Display results (USD + converted currency)
+// 3. Display results (USD + converted)
 function displayResults(resultsInUSD) {
   const currency = document.getElementById("currencySelect").value;
   const rate = exchangeRates[currency] || 1;
@@ -49,7 +49,7 @@ function displayResults(resultsInUSD) {
   const interestConverted = resultsInUSD.totalInterest * rate;
   const principalConverted = resultsInUSD.principal * rate;
 
-  // Format strings for USD and local currency
+  // Format strings
   const usdMonthlyStr = formatInCurrency(resultsInUSD.monthlyPayment, "USD");
   const localMonthlyStr = formatInCurrency(monthlyConverted, currency);
 
@@ -101,7 +101,7 @@ function displayResults(resultsInUSD) {
 }
 
 // ──────────────────────────────────────────────────────────────────────────────
-// Generate amortization schedule (in USD) and display the table
+// 4. Generate amortization schedule (USD) and display the table
 function generateAmortizationSchedule(principalUSD, annualRatePercent, termYears) {
   const monthlyRate = annualRatePercent / 100 / 12;
   const numberOfPayments = termYears * 12;
@@ -162,7 +162,7 @@ function generateAmortizationSchedule(principalUSD, annualRatePercent, termYears
 }
 
 // ──────────────────────────────────────────────────────────────────────────────
-// Render a line chart of remaining balance over time (in USD)
+// 5. Render a line chart of remaining balance over time (USD)
 function renderBalanceChart(principalUSD, annualRatePercent, termYears) {
   const monthlyRate = annualRatePercent / 100 / 12;
   const numberOfPayments = termYears * 12;
@@ -233,7 +233,7 @@ function renderBalanceChart(principalUSD, annualRatePercent, termYears) {
 }
 
 // ──────────────────────────────────────────────────────────────────────────────
-// Car Loan Calculator
+// 6. Car Loan Calculator
 function calculateCarLoan() {
   const loanAmount = parseFloat(document.getElementById("loanAmount").value);
   const interestRate = parseFloat(document.getElementById("interestRate").value);
@@ -276,7 +276,7 @@ function calculateCarLoan() {
 }
 
 // ──────────────────────────────────────────────────────────────────────────────
-// EMI Calculator
+// 7. EMI Calculator
 function calculateEMI() {
   const loanAmount = parseFloat(
     document.getElementById("emiLoanAmount").value
@@ -320,7 +320,7 @@ function calculateEMI() {
 }
 
 // ──────────────────────────────────────────────────────────────────────────────
-// Used Car Loan Calculator
+// 8. Used Car Loan Calculator
 function calculateUsedCarLoan() {
   const carValue = parseFloat(document.getElementById("carValue").value);
   const interestRate = parseFloat(
@@ -366,14 +366,21 @@ function calculateUsedCarLoan() {
 }
 
 // ──────────────────────────────────────────────────────────────────────────────
-// Format number inputs to only allow digits and decimal
+// 9. Format number inputs to allow only digits/decimal
 function formatCurrency(input) {
   let value = input.value.replace(/[^\d.]/g, "");
   input.value = value;
 }
 
 // ──────────────────────────────────────────────────────────────────────────────
-// On page load: fetch exchange rates & add number‐format listeners
+// 10. Hamburger menu toggle
+function toggleMenu() {
+  const nav = document.getElementById("nav");
+  nav.classList.toggle("active");
+}
+
+// ──────────────────────────────────────────────────────────────────────────────
+// 11. On page load: fetch exchange rates & add input listeners
 document.addEventListener("DOMContentLoaded", () => {
   fetchExchangeRates();
   const inputs = document.querySelectorAll("input[type='number']");
