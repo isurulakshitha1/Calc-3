@@ -6,10 +6,10 @@
 
   <!-- SEO Meta -->
   <title>AutoLoanMath.com – Car Loan Calculator & EMI Tools</title>
-  <meta name="description" content="Calculate car loan EMI, total interest, and monthly payments online. Free, fast, and works in any currency.">
+  <meta name="description" content="Calculate car loan EMI, total interest, and monthly payments online. Free, fast, and works in any currency." />
 
-  <!-- Favicon -->
-  <link rel="icon" href="/favicon.png" type="image/png" />
+  <!-- Favicon (relative path, lowercase) -->
+  <link rel="icon" href="favicon.png" type="image/png" />
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="css/styles.css" />
@@ -18,7 +18,7 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-47M6WYEQKT"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag(){ dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-47M6WYEQKT');
   </script>
@@ -96,7 +96,10 @@
     </section>
 
     <div class="container">
-      <div class="ad-placeholder">Advertisement Space</div>
+      <div class="ad-placeholder">
+        <!-- AdSense Space -->
+        Advertisement Space
+      </div>
     </div>
 
     <section class="calculators-grid">
@@ -122,7 +125,10 @@
     </section>
 
     <div class="container">
-      <div class="ad-placeholder">Advertisement Space</div>
+      <div class="ad-placeholder">
+        <!-- AdSense Space -->
+        Advertisement Space
+      </div>
 
       <div class="content-section">
         <h2>Why Use AutoLoanMath.com?</h2>
@@ -159,6 +165,9 @@
     </div>
   </footer>
 
+  <!-- Chart.js from CDN (if you need charts on index.html) -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Calculator and toggleMenu script -->
   <script src="js/calculator.js"></script>
 </body>
 </html>
