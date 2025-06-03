@@ -6,10 +6,10 @@
 
   <!-- SEO Meta -->
   <title>Used Car Loan Calculator – AutoLoanMath</title>
-  <meta name="description" content="Find monthly payments for a used car loan including down payment and interest. Get amortization tables and a balance chart.">
+  <meta name="description" content="Find monthly payments for a used car loan including down payment and interest. Get amortization tables and a balance chart." />
 
-  <!-- Favicon -->
-  <link rel="icon" href="/favicon.png" type="image/png" />
+  <!-- Favicon (relative path) -->
+  <link rel="icon" href="favicon.png" type="image/png" />
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="css/styles.css" />
@@ -18,7 +18,7 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-47M6WYEQKT"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag(){ dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-47M6WYEQKT');
   </script>
@@ -29,7 +29,9 @@
       <div class="nav-container">
         <a href="index.html" class="logo">AutoLoanMath</a>
         <div class="hamburger" onclick="toggleMenu()">
-          <span></span><span></span><span></span>
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
         <nav id="nav">
           <ul>
@@ -50,28 +52,31 @@
         <p>Estimate payments for pre-owned vehicle financing.</p>
       </div>
 
-      <div class="ad-placeholder">Advertisement Space</div>
+      <div class="ad-placeholder">
+        <!-- AdSense Space -->
+        Advertisement Space
+      </div>
 
       <div class="form-container">
         <form onsubmit="event.preventDefault(); calculateUsedCarLoan();">
           <div class="form-group">
             <label for="carValue">Used Car Value ($)</label>
-            <input type="number" id="carValue" placeholder="18000" step="100" required>
+            <input type="number" id="carValue" placeholder="18000" step="100" required />
           </div>
 
           <div class="form-group">
             <label for="usedDownPayment">Down Payment ($)</label>
-            <input type="number" id="usedDownPayment" placeholder="3000" step="100">
+            <input type="number" id="usedDownPayment" placeholder="3000" step="100" />
           </div>
 
           <div class="form-group">
             <label for="usedInterestRate">Annual Interest Rate (%)</label>
-            <input type="number" id="usedInterestRate" placeholder="7.5" step="0.1" required>
+            <input type="number" id="usedInterestRate" placeholder="7.5" step="0.1" required />
           </div>
 
           <div class="form-group">
             <label for="usedLoanTerm">Loan Term (Years)</label>
-            <input type="number" id="usedLoanTerm" placeholder="4" step="1" required>
+            <input type="number" id="usedLoanTerm" placeholder="4" step="1" required />
           </div>
 
           <!-- Currency Selector -->
@@ -120,7 +125,10 @@
         </div>
       </div>
 
-      <div class="ad-placeholder">Advertisement Space</div>
+      <div class="ad-placeholder">
+        <!-- AdSense Space -->
+        Advertisement Space
+      </div>
     </div>
   </main>
 
@@ -132,7 +140,7 @@
 
   <!-- Chart.js from CDN -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <!-- Your JavaScript -->
+  <!-- Calculator and toggleMenu -->
   <script src="js/calculator.js"></script>
 </body>
 </html>
