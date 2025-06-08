@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- SEO Meta -->
   <title>Car Loan EMI Calculator – AutoLoanMath</title>
   <meta name="description" content="Free EMI calculator for car loans. Enter loan amount, interest rate, and term to get instant results with charts and schedules." />
 
-  <!-- Favicon (relative path) -->
-  <link rel="icon" href="favicon.png" type="image/png" />
+  <!-- Favicon (with versioning) -->
+  <link rel="shortcut icon" href="/favicon.png?v=2" type="image/png" />
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="css/styles.css" />
@@ -18,7 +18,7 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-47M6WYEQKT"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
+    function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-47M6WYEQKT');
   </script>
@@ -29,9 +29,7 @@
       <div class="nav-container">
         <a href="index.html" class="logo">AutoLoanMath</a>
         <div class="hamburger" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
+          <span></span><span></span><span></span>
         </div>
         <nav id="nav">
           <ul>
@@ -52,10 +50,7 @@
         <p>Find your monthly EMI payments for any car loan amount.</p>
       </div>
 
-      <div class="ad-placeholder">
-        <!-- AdSense Space -->
-        Advertisement Space
-      </div>
+      <div class="ad-placeholder">Advertisement Space</div>
 
       <div class="form-container">
         <form onsubmit="event.preventDefault(); calculateEMI();">
@@ -63,18 +58,14 @@
             <label for="emiLoanAmount">Loan Amount ($)</label>
             <input type="number" id="emiLoanAmount" placeholder="30000" step="100" required />
           </div>
-
           <div class="form-group">
             <label for="emiInterestRate">Annual Interest Rate (%)</label>
             <input type="number" id="emiInterestRate" placeholder="6.5" step="0.1" required />
           </div>
-
           <div class="form-group">
             <label for="emiLoanTerm">Loan Term (Years)</label>
             <input type="number" id="emiLoanTerm" placeholder="4" step="1" required />
           </div>
-
-          <!-- Currency Selector -->
           <div class="form-group">
             <label for="currencySelect">Currency:</label>
             <select id="currencySelect" required>
@@ -88,54 +79,40 @@
               <option value="SGD">SGD – Singapore Dollar</option>
             </select>
           </div>
-
           <button type="submit" class="calculate-btn">Calculate EMI</button>
         </form>
 
         <div id="results" class="results"></div>
 
-        <!-- Amortization Table Container -->
-        <div id="amortization-container" class="amortization-container" style="display: none; margin-top: 2rem;">
+        <div id="amortization-container" style="display:none; margin-top:2rem;">
           <h2>Amortization Schedule</h2>
-          <table id="amortization-table" class="amortization-table" style="width: 100%; border-collapse: collapse;">
+          <table id="amortization-table" style="width:100%; border-collapse:collapse;">
             <thead>
               <tr>
-                <th style="border-bottom: 1px solid #ccc; padding: 8px; text-align: left;">Payment #</th>
-                <th style="border-bottom: 1px solid #ccc; padding: 8px; text-align: right;">Payment (USD)</th>
-                <th style="border-bottom: 1px solid #ccc; padding: 8px; text-align: right;">Principal (USD)</th>
-                <th style="border-bottom: 1px solid #ccc; padding: 8px; text-align: right;">Interest (USD)</th>
-                <th style="border-bottom: 1px solid #ccc; padding: 8px; text-align: right;">Balance (USD)</th>
+                <th>Payment #</th><th>Payment</th><th>Principal</th><th>Interest</th><th>Balance</th>
               </tr>
             </thead>
-            <tbody id="amortization-body">
-              <!-- Populated by JS -->
-            </tbody>
+            <tbody id="amortization-body"></tbody>
           </table>
         </div>
 
-        <!-- Chart Container -->
-        <div id="chart-container" style="display: none; margin-top: 2rem;">
+        <div id="chart-container" style="display:none; margin-top:2rem;">
           <h2>Balance Over Time</h2>
           <canvas id="balanceChart" width="100%" height="40"></canvas>
         </div>
       </div>
 
-      <div class="ad-placeholder">
-        <!-- AdSense Space -->
-        Advertisement Space
-      </div>
+      <div class="ad-placeholder">Advertisement Space</div>
     </div>
   </main>
 
   <footer>
     <div class="container">
-      <p>&copy; 2025 AutoLoanMath.com - Free Car Loan Calculators. All rights reserved.</p>
+      <p>&copy; 2025 AutoLoanMath.com – Free Car Loan Calculators. All rights reserved.</p>
     </div>
   </footer>
 
-  <!-- Chart.js from CDN -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <!-- Calculator and toggleMenu -->
   <script src="js/calculator.js"></script>
 </body>
 </html>
