@@ -1,122 +1,118 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- SEO Meta -->
-  <title>Used Car Loan Calculator – AutoLoanMath</title>
-  <meta name="description" content="Find monthly payments for a used car loan including down payment and interest. Get amortization tables and a balance chart." />
-
-  <!-- Favicon (with versioning) -->
-  <link rel="shortcut icon" href="/favicon.png?v=2" type="image/png" />
-
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="css/styles.css" />
-
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-47M6WYEQKT"></script>
-  <script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />  <title>Used Car Loan Calculator – AutoLoanMath</title>
+  <meta name="description" content="Calculate monthly payments and interest on used car loans. Includes down payment, term, and full amortization schedule." />  <link rel="shortcut icon" href="/favicon.png?v=2" type="image/png" />  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Used Car Loan Calculator – AutoLoanMath" />
+  <meta property="og:description" content="Get accurate used car loan EMI and total payment estimates. Supports multiple currencies with detailed schedules." />
+  <meta property="og:image" content="https://autoloanmath.com/social-preview.png" />
+  <meta property="og:url" content="https://autoloanmath.com/used-car-loan-calculator.html" />
+  <meta name="twitter:card" content="summary_large_image" />  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="preload" href="css/styles.css" as="style" />
+  <link rel="stylesheet" href="css/styles.css" />  <script async src="https://www.googletagmanager.com/gtag/js?id=G-47M6WYEQKT"></script>  <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-47M6WYEQKT');
-  </script>
-</head>
+  </script>  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://autoloanmath.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Used Car Calculator", "item": "https://autoloanmath.com/used-car-loan-calculator.html"}
+    ]
+  }
+  </script></head>
 <body>
   <header>
     <div class="container">
       <div class="nav-container">
         <a href="index.html" class="logo">AutoLoanMath</a>
-        <div class="hamburger" onclick="toggleMenu()">
-          <span></span><span></span><span></span>
-        </div>
+        <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
         <nav id="nav">
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="car-loan-calculator.html">Car Loan Calculator</a></li>
             <li><a href="car-loan-emi-calculator.html">EMI Calculator</a></li>
-            <li><a href="used-car-loan-calculator.html">Used Car Calculator</a></li>
+            <li><a href="used-car-loan-calculator.html" class="active">Used Car Calculator</a></li>
+            <li><a href="blog.html">Blog</a></li>
           </ul>
         </nav>
       </div>
     </div>
-  </header>
+  </header>  <main class="container">
+    <section class="content-section">
+      <h1>Used Car Loan Calculator</h1>
+      <p>Estimate monthly payments and total loan cost for financing a used vehicle.</p>
+      <form id="loan-form">
+        <label>Loan Amount:</label>
+        <input type="number" id="loan-amount" required /><label>Down Payment:</label>
+    <input type="number" id="down-payment" required />
 
-  <main>
+    <label>Annual Interest Rate (%):</label>
+    <input type="number" id="interest-rate" step="0.01" required />
+
+    <label>Loan Term (in years):</label>
+    <input type="number" id="loan-term" required />
+
+    <label>Currency:</label>
+    <select id="currency">
+      <option value="USD">USD</option>
+      <option value="EUR">EUR</option>
+      <option value="INR">INR</option>
+      <option value="GBP">GBP</option>
+      <option value="AUD">AUD</option>
+      <option value="CAD">CAD</option>
+      <option value="JPY">JPY</option>
+      <option value="CNY">CNY</option>
+    </select>
+
+    <button type="submit">Calculate</button>
+  </form>
+
+  <div id="results" style="display: none;">
+    <h2>Results</h2>
+    <p id="monthly-payment"></p>
+    <p id="total-interest"></p>
+    <p id="total-payment"></p>
+
+    <canvas id="balanceChart" width="400" height="200"></canvas>
+
+    <h3>Amortization Schedule</h3>
+    <table id="amortization-table">
+      <thead>
+        <tr>
+          <th>Month</th>
+          <th>Principal</th>
+          <th>Interest</th>
+          <th>Balance</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</section>
+
+<section class="content-section">
+  <h2>FAQs – Used Car Loans</h2>
+  <div class="faq-item">
+    <div class="faq-question">Are used car loan interest rates higher?</div>
+    <div class="faq-answer">Yes, they are typically 1–2% higher due to increased lender risk on pre-owned vehicles.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-question">What down payment is recommended?</div>
+    <div class="faq-answer">We suggest at least 20% of the vehicle price to reduce EMI and interest costs.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-question">Can I prepay a used car loan?</div>
+    <div class="faq-answer">Most lenders allow early repayment with minimal or no prepayment penalties.</div>
+  </div>
+</section>
+
+  </main>  <footer>
     <div class="container">
-      <div class="hero">
-        <h1>Used Car Loan Calculator</h1>
-        <p>Estimate payments for pre-owned vehicle financing.</p>
-      </div>
-
-      <div class="ad-placeholder">Advertisement Space</div>
-
-      <div class="form-container">
-        <form onsubmit="event.preventDefault(); calculateUsedCarLoan();">
-          <div class="form-group">
-            <label for="carValue">Used Car Value ($)</label>
-            <input type="number" id="carValue" placeholder="18000" step="100" required />
-          </div>
-          <div class="form-group">
-            <label for="usedDownPayment">Down Payment ($)</label>
-            <input type="number" id="usedDownPayment" placeholder="3000" step="100" />
-          </div>
-          <div class="form-group">
-            <label for="usedInterestRate">Annual Interest Rate (%)</label>
-            <input type="number" id="usedInterestRate" placeholder="7.5" step="0.1" required />
-          </div>
-          <div class="form-group">
-            <label for="usedLoanTerm">Loan Term (Years)</label>
-            <input type="number" id="usedLoanTerm" placeholder="4" step="1" required />
-          </div>
-          <div class="form-group">
-            <label for="currencySelect">Currency:</label>
-            <select id="currencySelect" required>
-              <option value="USD" selected>USD – US Dollar</option>  
-              <option value="EUR">EUR – Euro</option>  
-              <option value="GBP">GBP – British Pound</option>  
-              <option value="INR">INR – Indian Rupee</option>  
-              <option value="AUD">AUD – Australian Dollar</option>  
-              <option value="CAD">CAD – Canadian Dollar</option>  
-              <option value="JPY">JPY – Japanese Yen</option>  
-              <option value="SGD">SGD – Singapore Dollar</option>  
-            </select>
-          </div>
-          <button type="submit" class="calculate-btn">Calculate Used Car Loan</button>
-        </form>
-
-        <div id="results" class="results"></div>
-
-        <div id="amortization-container" style="display:none; margin-top:2rem;">
-          <h2>Amortization Schedule</h2>
-          <table id="amortization-table" style="width:100%; border-collapse:collapse;">
-            <thead>
-              <tr>
-                <th>Payment #</th><th>Payment</th><th>Principal</th><th>Interest</th><th>Balance</th>
-              </tr>
-            </thead>
-            <tbody id="amortization-body"></tbody>
-          </table>
-        </div>
-
-        <div id="chart-container" style="display:none; margin-top:2rem;">
-          <h2>Balance Over Time</h2>
-          <canvas id="balanceChart" width="100%" height="40"></canvas>
-        </div>
-      </div>
-
-      <div class="ad-placeholder">Advertisement Space</div>
+      <p>&copy; 2025 AutoLoanMath.com - All rights reserved.</p>
     </div>
-  </main>
-
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 AutoLoanMath.com – Free Car Loan Calculators. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="js/calculator.js"></script>
-</body>
+  </footer>  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>  <script src="js/calculator.js"></script></body>
 </html>
