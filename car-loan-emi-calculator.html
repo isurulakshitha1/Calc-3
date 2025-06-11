@@ -1,23 +1,116 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-
-  <title>Car Loan EMI Calculator – AutoLoanMath</title>
-  <meta name="description" content="Free EMI calculator for car loans. Enter loan amount, interest rate, and term to get instant results with charts and schedules." />
-
-  <link rel="shortcut icon" href="/favicon.png?v=2" type="image/png" />
-  <link rel="stylesheet" href="css/styles.css" />
-
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-47M6WYEQKT"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-47M6WYEQKT');</script>
-</head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />  <title>Car Loan EMI Calculator – AutoLoanMath</title>
+  <meta name="description" content="Calculate your monthly EMI for car loans using our smart EMI calculator. Get payment, interest, and schedule instantly." />  <link rel="shortcut icon" href="/favicon.png?v=2" type="image/png" />  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Car Loan EMI Calculator – AutoLoanMath" />
+  <meta property="og:description" content="Free EMI calculator for car loans. Estimate monthly payment, total interest, and full amortization instantly." />
+  <meta property="og:image" content="https://autoloanmath.com/social-preview.png" />
+  <meta property="og:url" content="https://autoloanmath.com/car-loan-emi-calculator.html" />
+  <meta name="twitter:card" content="summary_large_image" />  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="preload" href="css/styles.css" as="style" />
+  <link rel="stylesheet" href="css/styles.css" />  <script async src="https://www.googletagmanager.com/gtag/js?id=G-47M6WYEQKT"></script>  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-47M6WYEQKT');
+  </script>  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://autoloanmath.com/"},
+      {"@type": "ListItem", "position": 2, "name": "EMI Calculator", "item": "https://autoloanmath.com/car-loan-emi-calculator.html"}
+    ]
+  }
+  </script></head>
 <body>
-  <header>...nav...</header>
-  <main>...EMI form, currency, results, amortization, chart...</main>
-  <footer>...footer...</footer>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="js/calculator.js"></script>
-</body>
-</html>
+  <header>
+    <div class="container">
+      <div class="nav-container">
+        <a href="index.html" class="logo">AutoLoanMath</a>
+        <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+        <nav id="nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="car-loan-calculator.html">Car Loan Calculator</a></li>
+            <li><a href="car-loan-emi-calculator.html" class="active">EMI Calculator</a></li>
+            <li><a href="used-car-loan-calculator.html">Used Car Calculator</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>  <main class="container">
+    <section class="content-section">
+      <h1>Car Loan EMI Calculator</h1>
+      <p>Enter your loan amount, interest rate, and loan term to instantly calculate your EMI and full repayment schedule.</p><form id="emi-form">
+    <label>Loan Amount:</label>
+    <input type="number" id="loan-amount" required />
+
+    <label>Annual Interest Rate (%):</label>
+    <input type="number" id="interest-rate" step="0.01" required />
+
+    <label>Loan Term (in years):</label>
+    <input type="number" id="loan-term" required />
+
+    <label>Currency:</label>
+    <select id="currency">
+      <option value="USD">USD</option>
+      <option value="EUR">EUR</option>
+      <option value="INR">INR</option>
+      <option value="GBP">GBP</option>
+      <option value="AUD">AUD</option>
+      <option value="CAD">CAD</option>
+      <option value="JPY">JPY</option>
+      <option value="CNY">CNY</option>
+    </select>
+
+    <button type="submit">Calculate EMI</button>
+  </form>
+
+  <div id="results" style="display: none;">
+    <h2>Results</h2>
+    <p id="monthly-payment"></p>
+    <p id="total-interest"></p>
+    <p id="total-payment"></p>
+
+    <canvas id="balanceChart" width="400" height="200"></canvas>
+
+    <h3>Amortization Schedule</h3>
+    <table id="amortization-table">
+      <thead>
+        <tr>
+          <th>Month</th>
+          <th>Principal</th>
+          <th>Interest</th>
+          <th>Balance</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</section>
+
+<section class="content-section">
+  <h2>FAQs about Car Loan EMI</h2>
+  <div class="faq-item">
+    <div class="faq-question">What is EMI?</div>
+    <div class="faq-answer">EMI stands for Equated Monthly Installment. It's the monthly payment combining interest and principal.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-question">How is EMI calculated?</div>
+    <div class="faq-answer">EMI = [P × R × (1+R)^N] / [(1+R)^N - 1], where P is loan amount, R is monthly interest rate, and N is total payments.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-question">Does EMI change over time?</div>
+    <div class="faq-answer">For fixed-rate loans, EMI remains constant. Only the split between interest and principal changes.</div>
+  </div>
+</section>
+
+  </main>  <footer>
+    <div class="container">
+      <p>&copy; 2025 AutoLoanMath.com - All rights reserved.</p>
+    </div>
+  </footer>  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>  <script src="js/calculator.js"></script></body>
+             </html>
