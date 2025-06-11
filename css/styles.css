@@ -367,22 +367,35 @@ footer {
   max-height: 400px;
 }
 .blog-list {
-  display: grid;
-  gap: 1.5rem;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   margin-top: 2rem;
+}
+
+.blog-item {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba(0,0,0,0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.blog-item:hover {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 }
 
 .blog-item img {
   width: 100%;
-  max-width: 600px;
-  height: auto;
-  border-radius: 12px;
+  max-height: 200px;
+  object-fit: cover;
   display: block;
-  margin-bottom: 0.5rem;
 }
 
 .blog-item h2 {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin: 0;
+  padding: 0.75rem 1rem;
+  line-height: 1.4;
 }
