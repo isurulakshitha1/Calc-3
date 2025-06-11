@@ -1,49 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- SEO Meta -->
-  <title>AutoLoanMath – Smart Car Loan & EMI Calculators</title>
-  <meta name="description" content="Calculate car loan payments, EMI, total interest, and schedules using AutoLoanMath's smart tools. Free, fast, and supports multiple currencies." />
-
-  <!-- Favicon -->
-  <link rel="shortcut icon" href="/favicon.png?v=2" type="image/png" />
-
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="css/styles.css" />
-
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-47M6WYEQKT"></script>
-  <script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />  <!-- SEO Meta -->  <title>AutoLoanMath – Smart Car Loan & EMI Calculators</title>
+  <meta name="description" content="Calculate car loan payments, EMI, total interest, and schedules using our free multi-currency tools." />  <!-- Favicon -->  <link rel="shortcut icon" href="/favicon.png?v=2" type="image/png" />  <!-- Social Preview -->  <meta property="og:type" content="website" />
+  <meta property="og:title" content="AutoLoanMath – Smart Car Loan & EMI Calculators" />
+  <meta property="og:description" content="Calculate car loan payments, EMI, total interest, and schedules using our free multi-currency tools." />
+  <meta property="og:image" content="https://autoloanmath.com/social-preview.png" />
+  <meta property="og:url" content="https://autoloanmath.com/" />
+  <meta name="twitter:card" content="summary_large_image" />  <!-- Preconnect & Preload -->  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="preload" href="css/styles.css" as="style" />
+  <link rel="stylesheet" href="css/styles.css" />  <!-- Google Analytics -->  <script async src="https://www.googletagmanager.com/gtag/js?id=G-47M6WYEQKT"></script>  <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);} 
+    function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-47M6WYEQKT');
-  </script>
-
-  <!-- FAQ Structured Data -->
-  <script type="application/ld+json">
+  </script>  <!-- Structured Data -->  <script type="application/ld+json">
   {
-    "@context":"https://schema.org","@type":"FAQPage",
-    "mainEntity":[
-      {"@type":"Question","name":"What is EMI in car loans?","acceptedAnswer":{"@type":"Answer","text":"EMI stands for Equated Monthly Installment. It's the fixed amount you pay monthly to repay your car loan, which includes both principal and interest components."}},
-      {"@type":"Question","name":"How is car loan EMI calculated?","acceptedAnswer":{"@type":"Answer","text":"EMI is calculated using the formula: EMI = [P x R x (1+R)^N] / [(1+R)^N - 1], where P is principal, R is monthly interest rate, and N is the number of monthly installments."}},
-      {"@type":"Question","name":"Can I prepay my car loan to reduce EMI burden?","acceptedAnswer":{"@type":"Answer","text":"Yes, most lenders allow prepayment. You can either reduce your EMI amount while keeping the same tenure, or reduce the tenure while maintaining the same EMI amount."}},
-      {"@type":"Question","name":"What factors affect my car loan EMI?","acceptedAnswer":{"@type":"Answer","text":"Your EMI is affected by the loan amount, interest rate, loan tenure, and your down payment. A larger down payment reduces your loan amount and subsequently your EMI."}}
+    "@context":"https://schema.org",
+    "@graph":[
+      {"@type":"Organization","url":"https://autoloanmath.com/","logo":"https://autoloanmath.com/favicon.png"},
+      {"@type":"WebSite","url":"https://autoloanmath.com/","name":"AutoLoanMath","potentialAction":{"@type":"SearchAction","target":"https://autoloanmath.com/?s={search_term_string}","query-input":"required name=search_term_string"}},
+      {"@type":"BreadcrumbList","itemListElement":[
+        {"@type":"ListItem","position":1,"name":"Home","item":"https://autoloanmath.com/"},
+        {"@type":"ListItem","position":2,"name":"Car Loan Calculator","item":"https://autoloanmath.com/car-loan-calculator.html"},
+        {"@type":"ListItem","position":3,"name":"EMI Calculator","item":"https://autoloanmath.com/car-loan-emi-calculator.html"},
+        {"@type":"ListItem","position":4,"name":"Used Car Calculator","item":"https://autoloanmath.com/used-car-loan-calculator.html"},
+        {"@type":"ListItem","position":5,"name":"Blog","item":"https://autoloanmath.com/blog.html"}
+      ]}
     ]
   }
-  </script>
-</head>
+  </script></head>
 <body>
   <header>
     <div class="container">
       <div class="nav-container">
         <a href="index.html" class="logo">AutoLoanMath</a>
-        <div class="hamburger" onclick="toggleMenu()">
-          <span></span><span></span><span></span>
-        </div>
+        <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
         <nav id="nav">
           <ul>
             <li><a href="index.html">Home</a></li>
@@ -55,19 +47,56 @@
         </nav>
       </div>
     </div>
-  </header>
+  </header>  <main class="container">
+    <section class="hero">
+      <h1>Empower Your Auto Financing</h1>
+      <p>Free car loan calculators: EMI, total interest, and payment schedules—instantly, in any currency.</p>
+    </section><div class="ad-placeholder">Advertisement Space</div>
 
-  <main>
-    <!-- Hero, cards, content omitted for brevity (same as earlier) -->
-  </main>
+<section class="calculators-grid">
+  <div class="calculator-card">
+    <h2>Car Loan Calculator</h2>
+    <p>Estimate your monthly car loan payments including down payment, interest, and term.</p>
+    <a href="car-loan-calculator.html" class="btn">Calculate Car Loan</a>
+  </div>
+  <div class="calculator-card">
+    <h2>Car Loan EMI Calculator</h2>
+    <p>Get your Equated Monthly Installment (EMI) amount and breakdown.</p>
+    <a href="car-loan-emi-calculator.html" class="btn">Calculate EMI</a>
+  </div>
+  <div class="calculator-card">
+    <h2>Used Car Loan Calculator</h2>
+    <p>Special tool for pre-owned vehicle financing with adjusted rates.</p>
+    <a href="used-car-loan-calculator.html" class="btn">Calculate Used Car Loan</a>
+  </div>
+</section>
 
-  <footer>
+<div class="ad-placeholder">Advertisement Space</div>
+
+<section class="content-section">
+  <h2>Why Choose AutoLoanMath?</h2>
+  <p>Our calculators are built by finance experts, updated regularly, and optimized for accuracy in multiple currencies. Whether you're buying new or used, our tools give you clarity over your financial commitment.</p>
+</section>
+
+<section class="content-section">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-item">
+    <div class="faq-question">How accurate are these calculators?</div>
+    <div class="faq-answer">They use standard loan formulas and real-time exchange rates. Final bank offers may vary slightly.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-question">Can I use these for refinancing?</div>
+    <div class="faq-answer">Yes—enter your remaining balance as the loan amount to see refinancing EMI.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-question">Which currency should I choose?</div>
+    <div class="faq-answer">Select the currency you are borrowing in; our rates update live for eight major currencies.</div>
+  </div>
+</section>
+
+  </main>  <footer>
     <div class="container">
       <p>&copy; 2025 AutoLoanMath.com - All rights reserved.</p>
     </div>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="js/calculator.js"></script>
-</body>
+  </footer>  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>  <script src="js/calculator.js"></script></body>
 </html>
