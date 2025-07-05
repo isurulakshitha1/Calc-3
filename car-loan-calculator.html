@@ -58,30 +58,39 @@
       <p>Planning to buy a new or used car? One of the most important first steps is understanding how much it will truly cost you each month. Our free and easy-to-use car loan calculator helps you see the complete financial picture before you even step into a dealership.</p>
       <p>By calculating your estimated monthly payment, you can shop with confidence, stay within your budget, and negotiate a better deal. This calculator provides a detailed estimate by including key factors like your down payment and interest rate, giving you the knowledge you need to make a smart financial decision.</p>
       
-      <form id="loan-form">
-        <label>Loan Amount:</label>
-        <input type="number" id="loan-amount" required /><label>Down Payment:</label>
-        <input type="number" id="down-payment" required />
-
-        <label>Annual Interest Rate (%):</label>
-        <input type="number" id="interest-rate" step="0.01" required />
-
-        <label>Loan Term (in years):</label>
-        <input type="number" id="loan-term" required />
-
-        <label>Currency:</label>
-        <select id="currency">
-          <option value="USD">USD</option>
-          <option value="EUR">EUR</option>
-          <option value="INR">INR</option>
-          <option value="GBP">GBP</option>
-          <option value="AUD">AUD</option>
-          <option value="CAD">CAD</option>
-          <option value="JPY">JPY</option>
-          <option value="CNY">CNY</option>
-        </select>
-
-        <button type="submit">Calculate</button>
+      <form id="loan-form" class="calculator-form">
+        <div class="form-group">
+          <label for="loan-amount">Loan Amount:</label>
+          <input type="number" id="loan-amount" required />
+        </div>
+        <div class="form-group">
+          <label for="down-payment">Down Payment:</label>
+          <input type="number" id="down-payment" required />
+        </div>
+        <div class="form-group">
+          <label for="interest-rate">Annual Interest Rate (%):</label>
+          <input type="number" id="interest-rate" step="0.01" required />
+        </div>
+        <div class="form-group">
+          <label for="loan-term">Loan Term (in years):</label>
+          <input type="number" id="loan-term" required />
+        </div>
+        <div class="form-group form-group-full">
+          <label for="currency">Currency:</label>
+          <select id="currency">
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="INR">INR</option>
+            <option value="GBP">GBP</option>
+            <option value="AUD">AUD</option>
+            <option value="CAD">CAD</option>
+            <option value="JPY">JPY</option>
+            <option value="CNY">CNY</option>
+          </select>
+        </div>
+        <div class="form-group form-group-full">
+            <button type="submit">Calculate</button>
+        </div>
       </form>
 
       <div id="results" style="display: none;">
